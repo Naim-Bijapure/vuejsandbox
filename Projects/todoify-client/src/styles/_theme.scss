@@ -1,0 +1,60 @@
+
+$bodyBgColor: rgb(255, 255, 255);
+
+$globalFontColor: rgb(31, 31, 31);
+$globalFontSize: 16px;
+
+$defaultLinkColor: #0E2B44;
+
+$inputBgColor: #ffff;
+$inputFontColor: $globalFontColor;
+$inputBorder: 1px solid rgb(196, 196, 196);
+
+$headerBgColor: #0E2B44;
+$headerFontColor: rgb(255, 255, 255);
+
+$mainNavBgColor: #0E2B44;
+$mainNavFontColor: #466380;
+
+$mainViewBgColor: #fcfcfc;
+
+$containerTitleFontColor: $globalFontColor;
+
+$listBgColor: #FFF;
+$listBorder: 1px solid rgb(224, 224, 224);
+$listItemBgColor: $listBgColor;
+$listItemFontColor: $globalFontColor;
+$listItemBorderBottom: $listBorder;
+
+$requestStatusBgColor: none;
+$requestStatusFontColor: rgb(31, 31, 31);
+
+$requestLoaderBorder: 2px solid #f3f3f3; // "Background"
+$requestLoaderBorderTop: 2px solid #3498db; // "Foreground
+
+$buttonBgColor: rgb(189, 189, 189);
+$buttonFontColor: #000;
+
+$buttonPrimaryBgColor: #30465c;
+$buttonPrimaryFontColor: #fff;
+
+$buttonSuccessBgColor: #5AAF50;
+$buttonSuccessFontColor: #fff;
+
+$buttonAlertBgColor: #EF4835;
+$buttonAlertFontColor: #fff;
+
+$roundButtonBgColor: #223A52;
+$roundButtonFontColor: #466380;
+
+$defaultBoxShadow: 1px 1px 10px rgba(0, 0, 0, 0.089);
+
+$summaryBgColor: #FFF;
+$summaryFontColor: $globalFontColor;
+$summaryBorder: 1px solid rgb(224, 224, 224);
+$summaryTitleFontColor: $globalFontColor;
+$summaryBodyFontColor: $globalFontColor;
+
+$cardBgColor: #ffffff;
+$cardTitleFontColor: $globalFontColor;
+$cardFontColor: $globalFontColor;
