@@ -1,17 +1,32 @@
 <template>
- <div class="main-div">
- <div :class="'main-div'">
-   hello 
- <span v-if="dataIf">data with condition</span>
- </div>
+
+<div>
+  <dir>
+<input v-model="firstName" type="text" placeholder="firstName" />
+<input v-model="lastName" type="text" placeholder="lastName" />
+  </dir>
+  <div>
+      {{fullNameMethod()}}
+      <!-- {{fullNameComputed}} -->
+  </div>
   
   <div>
-  naim
-  <button v-on:[eventName]="run()"> click</button>
-  <button v-bind:[key]="value"></button>
-  </div> 
- 
-  </div> 
+
+  <button @click="run()">click</button>
+  <button @click="a++"> method A</button>
+  <button @click="b++"> method B</button>
+  <div>
+    {{methodA()}}
+    {{methodB()}}
+  </div>
+
+  <div>
+    {{computedA}}
+    {{computedB}}
+  </div>
+  </div>
+  
+</div>
 </template>
 
 <script>
@@ -22,21 +37,79 @@ export default {
   },
  data () {
     return{
-      rawHtml:'<b>cool</b>',
-      bindedData:'binded data',
-      inputData:'yo man',
-      dataIf:true,
-      eventName:'focus',
-      key:'cool',
-      value:'main-div'
+      mathData:Math.random(),
+      data:'cool naim',
+      firstName:'',
+      lastName:'',
+      yo:'yo man',
+      a:0,
+      b:0,
+      age:20
 
     } 
  },
  methods:{
+   
+     randomMethod:function () {
+               return this.data;  
+     },
      run:function () {
-        // dataIf=false;
-        this.dataIf=false;
-     }
+       console.log('run method');
+       
+                this.data='yo man';
+      },
+      fullNameMethod(){
+            return  this.firstName +' '+this.lastName+" "+this.yo ;
+      },
+      testMethod(){
+         console.log('test method');
+         return this.firstName +' ' +this.yo
+                 
+      },
+
+      methodA(){
+        console.log('method A');
+        
+        this.a+this.age
+      },
+
+      methodB(){
+        console.log('method B');
+        
+        this.b+this.age
+      }
+
+
+
+ }
+ ,
+ computed:{
+     
+     myComputed:function () {
+        return this.data; 
+     },
+
+     fullNameComputed(){
+       return  this.firstName +' '+this.lastName ;
+
+     },
+    
+      computedA(){
+        console.log('computed A');
+        
+        this.a+this.age
+      },
+    computedB(){
+        console.log('computed B');
+        
+        this.b+this.age
+      }
+ },
+ watch:{
+      value:function (e) {
+         console.log('value changed',e);
+          
+      }
  }
 
 
